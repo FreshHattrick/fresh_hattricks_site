@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+
+<html>
+
+     <head>
+	 
+		 <meta name="msapplication-TileColor" content="#4E4E4E">
+		 
+	     <meta name="msapplication-TileImage" content="images/pfp.png">
+		 
+		 <meta name="theme-color" content="#c8c8c8">
+     
+		 <title>Fresh Hattrick</title>
+	 
+		 <link rel="stylesheet" type="text/css" href="main.css">
+		 
+		 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		 
+		 <link rel="icon" type="image/png" sizes="32x32" href="images/pfp.png">
+	 
+	 </head>
+	 
+	 <body style="margin: 0px;">
+	 
+	     <div class="channel">
+		 
+			 <div id="stick-here"></div>
+		 
+			 <a id="goBack" href="index.html">
+			 
+				 <img id="arrow" src="images/backArrow.png"/>
+			 
+			 </a>
+			 
+			 <div class="imagesChannel">
+			 
+				 <img id="pointRight" src="images/pointRight.png"/>
+				 
+				 <img id="crossArmsCha" src="images/cross_arms.png"/>
+				 
+				 <img id="beatSaber" src="images/beatSaber.png"/>
+				 
+				 <img id="patPointCha" src="images/pat_point.png"/>
+				 
+			 </div>
+
+			 <p id="channelTitle">
+			
+				 Fresh Hattrick
+			
+			 </p>
+			 
+			 <p id="beatSaberTitle">
+			
+				 Beat Saber
+				 
+			 </p>
+			 
+			 <p id="navTitle">
+			 
+				 Navigation
+				 
+			 </p>
+			 
+			 <iframe id="beatSaber1" src="https://www.youtube.com/embed/cay05HCWW7U" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+			 
+		 </div>
+		 
+		 <script>
+		 
+		 function sticktothetop()
+		 {
+		     var window_top = $(window).scrollTop();
+			 var top = $('#stick-here').offset().top;
+				 if (window_top > top) 
+				 {
+					 $('#navTitle').addClass('stick');
+					 $('#stick-here').height($('#navTitle').outerHeight());
+				 } else 
+				 {
+					 $('#navTitle').removeClass('stick');
+					 $('#stick-here').height(0);
+				 }
+		 }
+		 
+		 $(function() 
+		 {
+			 $(window).scroll(sticktothetop);
+			 sticktothetop();
+		 });
+		 
+		 </script>
+	 
+	 </body>
+	 
+</html>
